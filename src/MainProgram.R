@@ -6,4 +6,4 @@ Download_Dataset(Input_files,dest_location="../Data/Stations")
 # Step 2 - Merge the downloaded data sets of 43 Stations.
 # Here we merge only the columns common between 43 stations
 
-write.csv(Merge_DataSets(),"../Data/Consolidated/ConsolidatedStationData.csv")
+write.csv(MergeAndCleanDataSets(),"../Data/Consolidated/ConsolidatedStationData.csv")
