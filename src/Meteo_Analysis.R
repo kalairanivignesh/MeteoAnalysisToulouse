@@ -22,3 +22,16 @@ Download_Dataset <- function(x,base_url="https://toulouse-metropole.opendatasoft
 
 }
 
+
+
+Merge_DataSets <- function(sourcePath = "../Data/Stations", extension = "*.csv")
+{
+  list_files <- paste0(sourcePath,"/",list.files(path=sourcePath,pattern = extension))
+  all_station_data <- lapply(list_files,read.csv,sep=";",header=T )
+  common_cols <- Reduce(intersect, lapply(all_station_data, names)) # To Find common columns in all the files
+  Consolidated_station<- do.call(rbind,lapply(all_station_data, "[", common_cols))
+  Consolidated_station
+}
+
+
+
