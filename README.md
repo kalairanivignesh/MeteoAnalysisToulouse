@@ -2,7 +2,7 @@
 First R assignment in TBS to analyze Meteo Toulouse data
 
 TeamMembers:
-Gloria Pathi - <GITID>
-Murugesh Manthiramoorthi - /murugeshmanthiramoorthi
-Kalairani Vignesh - /kalairanivignesh
-XinPeng Li/Sibyl - /Poppypop29
+Gloria Pathi - <GITID> \n
+Murugesh Manthiramoorthi - /murugeshmanthiramoorthi \n
+Kalairani Vignesh - /kalairanivignesh \n
+XinPeng Li/Sibyl - /Poppypop29 \n
