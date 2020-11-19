@@ -9,6 +9,6 @@ Serge Nyawa
 
 ## Team Members:
 Gloria  Gayatri Padhi - <GITID> <br>
-Murugesh Manthiramoorthi - /murugeshmanthiramoorthi <br>
-Kalairani Vignesh - /kalairanivignesh <br>
-XinPeng Li/Sibyl - /Poppypop29 <br>
+[Murugesh Manthiramoorthi](https://github.com/murugeshmanthiramoorthi) <br>
+[Kalairani Vignesh](https://github.com/kalairanivignesh) <br>
+[XinPeng Li/Sibyl](https://github.com/Poppypop29) <br>
