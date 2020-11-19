@@ -18,7 +18,7 @@ Download_Dataset <- function(x,base_url="https://toulouse-metropole.opendatasoft
 {
   sapply(x$V1,function(i)
     {
-    download.file(paste0(base_url,i,download_parameter),destfile = paste0(dest_location,i,file_extension),method="libcurl")
+    download.file(paste0(base_url,i,download_parameter),destfile = paste0(dest_location,i,file_extension),method="libcurl") # paste0 uses NULL seperation factor
   })
 
 }
