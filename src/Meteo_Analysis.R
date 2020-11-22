@@ -44,5 +44,13 @@ MergeAndCleanDataSets <- function(sourcePath = "../Data/Stations", extension = "
   Consolidated_station
 }
 
+CoerceCharacterToDate <- function(Dataset, columnName="heure_utc")
+{
+  Dataset[columnName][Dataset[columnName] == ""] <- NA
+  dtparts = t(as.data.frame(strsplit(sub("\\+00:00","",Dataset[,columnName]),'T')))
+  row.names(dtparts) = NULL
+  Dataset["CoercedUTC"] <- chron(dates=dtparts[,1],times=dtparts[,2],format=c('y-m-d','h:m:s'))
+  Dataset
+}
 
 
