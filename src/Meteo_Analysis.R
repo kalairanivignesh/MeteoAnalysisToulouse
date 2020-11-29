@@ -49,8 +49,37 @@ CoerceCharacterToDate <- function(Dataset, columnName="heure_utc")
   Dataset[columnName][Dataset[columnName] == ""] <- NA
   dtparts = t(as.data.frame(strsplit(sub("\\+00:00","",Dataset[,columnName]),'T')))
   row.names(dtparts) = NULL
-  Dataset["CoercedUTC"] <- chron(dates=dtparts[,1],times=dtparts[,2],format=c('y-m-d','h:m:s'))
+  Dataset["CoercedUTC"] <- as.POSIXct(chron(dates=dtparts[,1],times=dtparts[,2],format=c('y-m-d','h:m:s')), tz="utc")
   Dataset
 }
+
+
+cleanNA <- function(vector)
+{
+ vector <- vector[!is.na(vector)] 
+}
+
+
+createHistogram <- function(vector,breaks)
+{
+ hist(vector,breaks)
+}
+
+createHistogramWithoutNA <- function(vector,breaks)
+{
+  vector <- vector[!is.na(vector)]
+  hist(vector,breaks)
+}
+
+createHistogramWithoutNAandZero <- function(vector,breaks)
+{
+  vector <- cleanNA(vector)
+  vector <- vector[vector!=0]
+  hist(vector,breaks)
+}
+
+
+
+
 
 
