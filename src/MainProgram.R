@@ -16,3 +16,4 @@ colnames(consolidatedData)
 
 summary(consolidatedData)
 
+#Step4 Exploratory Data Analysis can be found in Direction_Du_Vector.R,force.R,pluie_et-temperature.R,humidity and pression.R
